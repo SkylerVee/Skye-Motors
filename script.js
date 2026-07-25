@@ -6,7 +6,7 @@ const fleetData = {
         brandImg2: "images/Mercedes.jpeg",
         models: [
             { name: "Mercedes-AMG GT Black Series", hp: "720 HP", price: "$325,000 | $1,800/day", img: "images/Mercedes AMG GT black series.jpg", tech: "4.0L V8 Biturbo, Active Aero", maint: "AMG Master Mechanic certified" },
-            { name: "Mercedes-Maybach S 680 4MATIC", hp: "621 HP", price: "$230,000 | $1,300/day", img: "images/Mercedes maybach.jpg", tech: "6.0L V12 Biturbo, Executive Rear Suite", maint: "Maybach VIP Priority Service" },
+            { name: "Mercedes-Maybach S 680 4MATIC", hp: "621 HP", price: "$230,000 | $1,300/day", img: "images/mercedes maybach.jpg", tech: "6.0L V12 Biturbo, Executive Rear Suite", maint: "Maybach VIP Priority Service" },
             { name: "Mercedes-Brabus 900 Rocket Edition", hp: "900 HP", price: "$550,000 | $2,500/day", img: "images/Brabus.jpg", tech: "4.5L V8, Custom Carbon Bodywork", maint: "Brabus Telemetry Refresh" },
             { name: "Mercedes-Maybach GLS 600 SUV", hp: "550 HP", price: "$170,000 | $1,100/day", img: "images/maybach GLS.jpg", tech: "4.0L V8 Biturbo, AIRMATIC", maint: "Quarterly inspection package" },
             { name: "Mercedes-AMG ONE", hp: "1049 HP", price: "$2,720,000 | $8,500/day", img: "images/mercedes amg.jpg", tech: "1.6L V6 Turbo + 4 Electric Motors (F1 Tech)", maint: "AMG F1 Powertrain Specialist" },
@@ -45,7 +45,7 @@ const fleetData = {
         brandImg2: "images/MCLaren.jpeg",
         models: [
             { name: "McLaren 720S Performance", hp: "710 HP", price: "$310,500 | $1,750/day", img: "images/mclaren 720.jpg", tech: "4.0L Twin-Turbo V8, Monocage II", maint: "McLaren Qualified Check" },
-            { name: "McLaren 750S Spider", hp: "740 HP", price: "$345,000 | $1,900/day", img: "images/mclaren 750s+.jpg", tech: "Retractable Hardtop, Proactive Chassis", maint: "Hydraulic System Service" },
+            { name: "McLaren 750S Spider", hp: "740 HP", price: "$345,000 | $1,900/day", img: "images/mclaren 750s.jpg", tech: "Retractable Hardtop, Proactive Chassis", maint: "Hydraulic System Service" },
             { name: "McLaren Artura Hybrid", hp: "671 HP", price: "$237,500 | $1,200/day", img: "images/mclaren artura.jpg", tech: "3.0L V6 Hybrid Powertrain", maint: "High-voltage battery service" },
             { name: "McLaren GT", hp: "612 HP", price: "$208,490 | $950/day", img: "images/mclaren gt.webp", tech: "Grand Tourer Chassis", maint: "Annual synthetic oil service" },
             { name: "McLaren Senna", hp: "789 HP", price: "$1,050,000 | $4,500/day", img: "images/mclaren senna.jpg", tech: "4.0L Twin-Turbo V8, Active Aero Canopy", maint: "McLaren Special Operations Service" },
