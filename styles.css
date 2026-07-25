@@ -1,9 +1,5 @@
-/* ==========================================================
-   CINEMATIC ULTRA ANIMATION PACK
-   (Append only)
-========================================================== */
-
 /* Modern Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;900&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body{
@@ -20,11 +16,6 @@ body{
     font-family:'Orbitron',sans-serif;
     letter-spacing:4px;
 }
-
-
-/* ===============================
-TEXT ANIMATIONS
-================================*/
 
 @keyframes megaBounce{
 
@@ -154,14 +145,7 @@ transform:translateY(2px);
 animation:
 waveText 3s infinite,
 dramaticPopIn 1.2s forwards;
-
 }
-
-
-
-/* =======================================
-BUTTONS
-======================================= */
 
 .btn-primary{
 
@@ -206,12 +190,6 @@ scale(1.12)
 rotate(2deg);
 
 }
-
-
-
-/* ======================================
-HANGING THREADS
-====================================== */
 
 .brand-card,
 .model-card{
@@ -274,12 +252,6 @@ transform:rotate(-2deg);
 }
 
 }
-
-
-
-/* ======================================
-DRAMATIC FLOAT
-====================================== */
 
 @keyframes floatMorph{
 
@@ -356,11 +328,6 @@ box-shadow:
 }
 
 
-
-/* ======================================
-IMAGE EFFECT
-====================================== */
-
 .image-wrapper img{
 
 transition:1s;
@@ -386,11 +353,6 @@ saturate(1.2);
 
 }
 
-
-
-/* ======================================
-SLIDES
-====================================== */
 
 .hero-slide.active{
 
@@ -436,12 +398,6 @@ scale(1);
 
 }
 
-
-
-/* ======================================
-ROTATING CARD
-====================================== */
-
 .rotating-card{
 
 animation:
@@ -465,11 +421,6 @@ scale(1.08);
 }
 
 
-
-/* ======================================
-CONTACT CARDS
-====================================== */
-
 .contact-info-card{
 
 animation:
@@ -490,11 +441,6 @@ scale(1.05);
 
 }
 
-
-
-/* ======================================
-FOOTER ICONS
-====================================== */
 
 .social-icons a{
 
@@ -538,12 +484,6 @@ transform:translateY(-4px);
 
 }
 
-
-
-/* ======================================
-NAV LINKS
-====================================== */
-
 .navbar nav a{
 
 position:relative;
@@ -583,22 +523,12 @@ width:100%;
 }
 
 
-
-/* ======================================
-PARAGRAPHS
-====================================== */
-
 .about-text p{
 
 animation:floatingWords 8s infinite;
 
 }
 
-
-
-/* ======================================
-3D HERO
-====================================== */
 
 .hero-content{
 
@@ -618,9 +548,7 @@ glowPulseDramatic 5s infinite;
 
 
 
-/* ======================================
-REDUCED MOTION
-====================================== */
+/*REDUCED MOTION*/
 
 @media(prefers-reduced-motion:reduce){
 
@@ -637,7 +565,7 @@ transition:none!important;
     --bg-dark: #0a0a0c;
     --card-bg: #141419;
     --card-border: #262630;
-    --text-primary: #ffffff;
+    --text-primary: #afe8ff;
     --text-secondary: #a0a0b0;
     --accent-blue: #00d2ff;
     --accent-purple: #9254de;
