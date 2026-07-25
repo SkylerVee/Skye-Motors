@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skye Motors | Premier Luxury & Hypercar Fleet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            <h2><i class="fa-solid fa-car-side" style="margin-right: 8px;"></i>SKYE MOTORS</h2>
+        </div>
+        <nav>
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#showcase">Our Collection</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Background Video -->
+    <section id="hero" class="hero-section">
+        <!-- Background Video -->
+         <video autoplay loop muted playsinline class="bg-video">
+            <source src="images/video.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="video-overlay"></div>
+
+        <div class="hero-content">
+            <h1 class="welcome-title">Welcome to Skye Motors!</h1>
+            <p class="hero-subtitle">Experience Precision, Luxury, and Unmatched Performance</p>
+
+            <!-- 8-Car Hero Slideshow -->
+            <div class="slideshow-wrapper">
+                <button id="prevSlide" class="slide-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                <div id="heroSlideshow" class="slideshow-container"></div>
+                <button id="nextSlide" class="slide-btn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <div class="hero-actions">
+                <button id="bookSessionBtn" class="btn-primary">Book Showroom Session</button>
+                <button id="reserveApexBtn" class="btn-outline">Reserve Apex GT</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Detailed Information & 5 Rotating Cars -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Skye Motors</h2>
+                <p>Welcome to Skye Motors, the pinnacle of high performance automotive excellence and luxury vehicle curation. Established for true driving enthusiasts and automotive connoisseurs, Skye Motors represents the world's most prestigious marques, including Mercedes-Maybach, Brabus, Porsche, Ferrari, Lamborghini, McLaren, and Bentley.</p>
+                <p>Our passion extends far beyond vehicle sourcing; we offer bespoke engineering consultations, track ready tuning services, and white glove concierge rentals across our global network. Every machine in our fleet undergoes rigorous multi point technical inspections by certified master technicians to guarantee peak operational integrity, speed, and safety.</p>
+                <p>Whether you are looking to reserve an exclusive track session, lease a flagship hypercar for a private getaway, or acquire a rare collector's edition, Skye Motors delivers an unparalleled experience rooted in sophistication, transparency, and precision.</p>
+            </div>
+            <div class="about-display">
+                <div class="rotating-card">
+                    <img id="rotatingCarImg" src="images/Mercedes.jpeg" alt="Rotating Luxury Vehicle">
+                    <h3 id="rotatingCarTitle" class="rotating-title">Mercedes-AMG GT</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Section -->
+    <section id="showcase" class="showcase-section">
+        <h2 class="section-title">Exclusive Brand Fleet</h2>
+        <div id="brandsGrid" class="brands-grid"></div>
+    </section>
+
+    <!-- Selected Brand Models View (Hidden by default) -->
+    <section id="models-view" class="models-section hidden">
+        <button id="backToBrandsBtn" class="btn-outline"><i class="fa-solid fa-arrow-left"></i> Back to Brands</button>
+        <h2 id="selectedBrandTitle" class="section-title"></h2>
+        <div id="modelsGrid" class="models-grid"></div>
+    </section>
+
+    <!-- Contact Section with Contact Cards -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Skye Motors</h2>
+        
+        <div class="contact-container">
+            <div class="contact-info-card">
+                <h3>Global Head Office</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Kenyatta Avenue, Nakuru Town</p>
+                <p><i class="fa-solid fa-phone"></i> +25495499535 / +254756439520</p>
+                <p><i class="fa-solid fa-envelope"></i> watetuvivian@gmail.com</p>
+            </div>
+
+            <div class="contact-info-card">
+                <h3>Showroom Hours</h3>
+                <p><i class="fa-solid fa-clock"></i> Monday - Friday: 8:00 AM - 8:00 PM</p>
+                <p><i class="fa-solid fa-clock"></i> Saturday: 9:00 AM - 6:00 PM</p>
+                <p><i class="fa-solid fa-calendar-check"></i> Sunday: By VIP Private Appointment Only</p>
+            </div>
+        </div>
+
+      <form id="contactForm" class="contact-form" action="https://formspree.io/f/xnjegkgg" method="POST">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <textarea name="message" placeholder="Your Inquiry or Reservation Request" rows="4" required></textarea>
+    <button type="submit" class="btn-primary">Submit Inquiry</button>
+</form>
+    </section>
+
+    <!-- Modal for Specs / Booking -->
+    <div id="modal" class="modal-backdrop">
+        <div class="modal-card">
+            <h3 id="modalTitle"></h3>
+            <div id="modalBody"></div>
+            <button id="closeModalBtn" class="btn-primary" style="margin-top: 1rem;">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer with WhatsApp Added & Twitter/YouTube Removed -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>SKYE MOTORS</h3>
+                <p>The global benchmark in luxury, performance, and hypercar curation.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#showcase">Our Collection</a></li>
+                    <li><a href="#contact">Contact & VIP Booking</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-socials">
+                <h4>Follow Skye Motors</h4>
+                <div class="social-icons">
+                    <a href="https://wa.me/254795499535" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/she.is_skyler?igsh=dW4zYjl5Ym1nZTln" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://tiktok.com/@simply_sky12" target="_blank" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://www.linkedin.com/in/vivian-watetu-52562b350?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Skye Motors Inc. All Rights Reserved. Designed for Automotive Enthusiasts.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
