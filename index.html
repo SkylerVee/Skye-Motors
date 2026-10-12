@@ -23,9 +23,11 @@
 
     <section id="hero" class="hero-section">
         <div class="hero-split-container">
-            
             <div class="hero-left">
-                <h1 class="welcome-title">Engineering Precision & <span>Luxury.</span></h1>
+                <div class="hero-badge">
+                    <span><i class="fa-solid fa-sparkles"></i> GLOBAL EXCLUSIVE FLEET</span>
+                </div>
+                <h1 class="welcome-title">Engineering Precision & <span class="ombre-text">Luxury.</span></h1>
                 <p class="hero-subtitle">Experience uncompromising performance, bespoke curation, and automotive mastery across the world's most elite hypercars.</p>
 
                 <div class="hero-actions">
@@ -50,13 +52,12 @@
             </div>
 
             <div class="hero-right">
-                <div class="slideshow-wrapper">
+                <div class="slideshow-wrapper floating-anim">
                     <button id="prevSlide" class="slide-btn"><i class="fa-solid fa-chevron-left"></i></button>
                     <div id="heroSlideshow" class="slideshow-container"></div>
                     <button id="nextSlide" class="slide-btn"><i class="fa-solid fa-chevron-right"></i></button>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -69,9 +70,9 @@
                 <p>Whether you are looking to reserve an exclusive track session, lease a flagship hypercar for a private getaway, or acquire a rare collector's edition, Skye Motors delivers an unparalleled experience rooted in sophistication, transparency, and precision.</p>
             </div>
             <div class="about-display">
-                <div class="rotating-card">
+                <div class="rotating-card floating-anim-alt">
                     <img id="rotatingCarImg" src="images/Mercedes.jpeg" alt="Rotating Luxury Vehicle">
-                    <h3 id="rotatingCarTitle" class="rotating-title">Mercedes-AMG GT</h3>
+                    <h3 id="rotatingCarTitle" class="rotating-title ombre-text">Mercedes-AMG GT</h3>
                 </div>
             </div>
         </div>
@@ -86,11 +87,11 @@
     </section>
 
     <section id="models-view" class="models-section hidden">
-        <div class="models-nav-bar">
-            <button id="backToBrandsBtn" class="btn-primary-back"><i class="fa-solid fa-arrow-left"></i> Return to Brand Fleet</button>
-            <h2 id="selectedBrandTitle" class="section-title-inline"></h2>
-        </div>
+        <h2 id="selectedBrandTitle" class="section-title text-center" style="margin-bottom: 2rem;"></h2>
         <div id="modelsGrid" class="models-grid"></div>
+        <div class="models-bottom-nav">
+            <button id="backToBrandsBtn" class="btn-primary-back"><i class="fa-solid fa-arrow-left"></i> Return to Brand Fleet</button>
+        </div>
     </section>
 
     <section id="contact" class="contact-section">

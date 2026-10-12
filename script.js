@@ -186,7 +186,7 @@ function initHeroSlideshow() {
     container.innerHTML = heroSlides.map((slide, idx) => `
         <div class="hero-slide ${idx === 0 ? 'active' : ''}">
             <img src="${slide.img}" alt="${slide.name}">
-            <h3>${slide.name}</h3>
+            <h3 class="ombre-text">${slide.name}</h3>
         </div>
     `).join("");
 
@@ -234,13 +234,13 @@ function renderBrands() {
     Object.keys(fleetData).forEach(key => {
         const brand = fleetData[key];
         grid.innerHTML += `
-            <div class="brand-card" data-brand="${key}">
+            <div class="brand-card floating-anim" data-brand="${key}">
                 <div class="image-wrapper">
                     <img class="img-primary" src="${brand.brandImg1}" alt="${brand.title}">
                     <img class="img-hover" src="${brand.brandImg2}" alt="${brand.title}">
                 </div>
                 <div class="card-details">
-                    <h3>${key.toUpperCase()}</h3>
+                    <h3 class="ombre-text">${key.toUpperCase()}</h3>
                 </div>
             </div>
         `;
@@ -258,18 +258,21 @@ function showBrandModels(brandKey) {
     const brand = fleetData[brandKey];
     if (!brand) return;
 
-    document.getElementById('selectedBrandTitle').innerText = brand.title;
+    document.getElementById('selectedBrandTitleinnerText', brand.title);
+    const titleEl = document.getElementById('selectedBrandTitle');
+    if(titleEl) titleEl.innerText = brand.title;
+
     const grid = document.getElementById('modelsGrid');
     grid.innerHTML = '';
 
     brand.models.forEach(m => {
         grid.innerHTML += `
-            <div class="model-card">
+            <div class="model-card floating-anim-alt">
                 <div class="image-wrapper">
                     <img src="${m.img}" alt="${m.name}">
                 </div>
                 <div class="card-details">
-                    <h4>${m.name}</h4>
+                    <h4 class="ombre-text">${m.name}</h4>
                     <p style="color:var(--accent-blue); font-weight:700; margin: 0.3rem 0;"><i class="fa-solid fa-bolt"></i> ${m.hp}</p>
                     <p style="font-size:0.9rem; color:var(--text-muted);">${m.price}</p>
                     <button class="btn-outline model-spec-btn" style="width:100%; margin-top:1rem;" 
@@ -298,7 +301,10 @@ function showBrandModels(brandKey) {
 }
 
 function openModal(title, text) {
-    document.getElementById('modalTitle').innerText = title;
+    document.getElementById('modalTitleinnerText', title);
+    const titleEl = document.getElementById('modalTitle');
+    if(titleEl) titleEl.innerText = title;
+    
     document.getElementById('modalBody').innerHTML = text;
     document.getElementById('modal').style.display = 'flex';
 }
