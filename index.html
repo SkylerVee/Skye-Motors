@@ -9,7 +9,6 @@
 </head>
 <body>
 
-    <!-- Header & Navigation -->
     <header class="navbar">
         <div class="logo">
             <h2><i class="fa-solid fa-car-side" style="margin-right: 8px;"></i>SKYE MOTORS</h2>
@@ -22,34 +21,45 @@
         </nav>
     </header>
 
-    <!-- Hero Section with Background Video -->
     <section id="hero" class="hero-section">
-        <!-- Background Video -->
-         <video autoplay loop muted playsinline class="bg-video">
-            <source src="images/video.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-        </video>
-        <div class="video-overlay"></div>
+        <div class="hero-split-container">
+            
+            <div class="hero-left">
+                <h1 class="welcome-title">Engineering Precision & <span>Luxury.</span></h1>
+                <p class="hero-subtitle">Experience uncompromising performance, bespoke curation, and automotive mastery across the world's most elite hypercars.</p>
 
-        <div class="hero-content">
-            <h1 class="welcome-title">Welcome to Skye Motors!</h1>
-            <p class="hero-subtitle">Experience Precision, Luxury, and Unmatched Performance</p>
+                <div class="hero-actions">
+                    <button id="bookSessionBtn" class="btn-primary">Book Showroom Session <i class="fa-solid fa-arrow-right"></i></button>
+                    <button id="reserveApexBtn" class="btn-outline">Reserve Apex GT</button>
+                </div>
 
-            <!-- 8-Car Hero Slideshow -->
-            <div class="slideshow-wrapper">
-                <button id="prevSlide" class="slide-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                <div id="heroSlideshow" class="slideshow-container"></div>
-                <button id="nextSlide" class="slide-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <i class="fa-solid fa-certificate"></i>
+                        <span>Master Certified</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span>White-Glove Delivery</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fa-solid fa-headset"></i>
+                        <span>24/7 VIP Concierge</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="hero-actions">
-                <button id="bookSessionBtn" class="btn-primary">Book Showroom Session</button>
-                <button id="reserveApexBtn" class="btn-outline">Reserve Apex GT</button>
+            <div class="hero-right">
+                <div class="slideshow-wrapper">
+                    <button id="prevSlide" class="slide-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                    <div id="heroSlideshow" class="slideshow-container"></div>
+                    <button id="nextSlide" class="slide-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
             </div>
+
         </div>
     </section>
 
-    <!-- About Section with Detailed Information & 5 Rotating Cars -->
     <section id="about" class="about-section">
         <div class="about-container">
             <div class="about-text">
@@ -67,20 +77,22 @@
         </div>
     </section>
 
-    <!-- Showcase Section -->
     <section id="showcase" class="showcase-section">
-        <h2 class="section-title">Exclusive Brand Fleet</h2>
+        <div class="showcase-header-wrap">
+            <h2 class="section-title">Exclusive Brand Fleet</h2>
+            <p class="section-subtitle">Select a manufacturer to explore custom specifications and inventory.</p>
+        </div>
         <div id="brandsGrid" class="brands-grid"></div>
     </section>
 
-    <!-- Selected Brand Models View (Hidden by default) -->
     <section id="models-view" class="models-section hidden">
-        <button id="backToBrandsBtn" class="btn-outline"><i class="fa-solid fa-arrow-left"></i> Back to Brands</button>
-        <h2 id="selectedBrandTitle" class="section-title"></h2>
+        <div class="models-nav-bar">
+            <button id="backToBrandsBtn" class="btn-primary-back"><i class="fa-solid fa-arrow-left"></i> Return to Brand Fleet</button>
+            <h2 id="selectedBrandTitle" class="section-title-inline"></h2>
+        </div>
         <div id="modelsGrid" class="models-grid"></div>
     </section>
 
-    <!-- Contact Section with Contact Cards -->
     <section id="contact" class="contact-section">
         <h2>Contact Skye Motors</h2>
         
@@ -88,7 +100,7 @@
             <div class="contact-info-card">
                 <h3>Global Head Office</h3>
                 <p><i class="fa-solid fa-location-dot"></i> Kenyatta Avenue, Nakuru Town</p>
-                <p><i class="fa-solid fa-phone"></i> +25495499535 / +254756439520</p>
+                <p><i class="fa-solid fa-phone"></i> +254795499535 / +254756439520</p>
                 <p><i class="fa-solid fa-envelope"></i> watetuvivian@gmail.com</p>
             </div>
 
@@ -100,15 +112,14 @@
             </div>
         </div>
 
-      <form id="contactForm" class="contact-form" action="https://formspree.io/f/xnjegkgg" method="POST">
-    <input type="text" name="name" placeholder="Full Name" required>
-    <input type="email" name="email" placeholder="Email Address" required>
-    <textarea name="message" placeholder="Your Inquiry or Reservation Request" rows="4" required></textarea>
-    <button type="submit" class="btn-primary">Submit Inquiry</button>
-</form>
+        <form id="contactForm" class="contact-form" action="https://formspree.io/f/xnjegkgg" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <textarea name="message" placeholder="Your Inquiry or Reservation Request" rows="4" required></textarea>
+            <button type="submit" class="btn-primary">Submit Inquiry</button>
+        </form>
     </section>
 
-    <!-- Modal for Specs / Booking -->
     <div id="modal" class="modal-backdrop">
         <div class="modal-card">
             <h3 id="modalTitle"></h3>
@@ -117,7 +128,6 @@
         </div>
     </div>
 
-    <!-- Footer with WhatsApp Added & Twitter/YouTube Removed -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-brand">

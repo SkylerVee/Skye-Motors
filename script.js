@@ -1,4 +1,3 @@
-// 1. Data Store: 12 Brands with their models
 const fleetData = {
     mercedes: {
         title: "Mercedes-Benz, Maybach & Brabus",
@@ -158,7 +157,6 @@ const fleetData = {
     }
 };
 
-// 2. Hero 8-Car Slideshow Data
 const heroSlides = [
     { name: "Mercedes-AMG GT", img: "images/Mercedes.jpeg" },
     { name: "Porsche 911 GT3 RS", img: "images/porsche.jpeg" },
@@ -170,7 +168,6 @@ const heroSlides = [
     { name: "Nissan GT-R NISMO", img: "images/Nissan.jpeg" }
 ];
 
-// 3. About Section: 5 Rotating Cars
 const aboutCars = [
     { name: "Mercedes-AMG GT", img: "images/about section mercedes.avif" },
     { name: "Porsche 911 GT3 RS", img: "images/about section porsche.webp" },
@@ -182,8 +179,6 @@ const aboutCars = [
 let currentSlideIndex = 0;
 let currentAboutCarIndex = 0;
 
-// Initialize Hero 8-Car Slideshow
-
 function initHeroSlideshow() {
     const container = document.getElementById("heroSlideshow");
     if (!container) return;
@@ -191,7 +186,7 @@ function initHeroSlideshow() {
     container.innerHTML = heroSlides.map((slide, idx) => `
         <div class="hero-slide ${idx === 0 ? 'active' : ''}">
             <img src="${slide.img}" alt="${slide.name}">
-            <h3 class="ombre-text">${slide.name}</h3>
+            <h3>${slide.name}</h3>
         </div>
     `).join("");
 
@@ -210,7 +205,6 @@ function changeHeroSlide(direction) {
     slides[currentSlideIndex].classList.add("active");
 }
 
-// Initialize About Section 5-Car Rotating Display (Fixed Text Direction)
 function initAboutRotation() {
     const imgEl = document.getElementById("rotatingCarImg");
     const titleEl = document.getElementById("rotatingCarTitle");
@@ -231,8 +225,6 @@ function initAboutRotation() {
         }, 400);
     }, 4000);
 }
-
-// Render Brand Cards in Showcase Grid
 
 function renderBrands() {
     const grid = document.getElementById('brandsGrid');
@@ -262,8 +254,6 @@ function renderBrands() {
     });
 }
 
-// Show Models View for Selected Brand
-
 function showBrandModels(brandKey) {
     const brand = fleetData[brandKey];
     if (!brand) return;
@@ -280,8 +270,8 @@ function showBrandModels(brandKey) {
                 </div>
                 <div class="card-details">
                     <h4>${m.name}</h4>
-                    <p style="color:var(--accent-blue, #00d2ff); font-weight:700; margin: 0.3rem 0;"><i class="fa-solid fa-bolt"></i> ${m.hp}</p>
-                    <p style="font-size:0.9rem;">${m.price}</p>
+                    <p style="color:var(--accent-blue); font-weight:700; margin: 0.3rem 0;"><i class="fa-solid fa-bolt"></i> ${m.hp}</p>
+                    <p style="font-size:0.9rem; color:var(--text-muted);">${m.price}</p>
                     <button class="btn-outline model-spec-btn" style="width:100%; margin-top:1rem;" 
                         data-name="${m.name}" data-tech="${m.tech}" data-maint="${m.maint}" data-price="${m.price}">
                         View Specs
@@ -293,6 +283,7 @@ function showBrandModels(brandKey) {
 
     document.getElementById('showcase').classList.add('hidden');
     document.getElementById('models-view').classList.remove('hidden');
+    window.scrollTo({ top: document.getElementById('models-view').offsetTop - 80, behavior: 'smooth' });
 
     document.querySelectorAll('.model-spec-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
@@ -324,6 +315,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('backToBrandsBtn').addEventListener('click', () => {
         document.getElementById('models-view').classList.add('hidden');
         document.getElementById('showcase').classList.remove('hidden');
+        window.scrollTo({ top: document.getElementById('showcase').offsetTop - 80, behavior: 'smooth' });
     });
 
     document.getElementById('closeModalBtn').addEventListener('click', closeModal);
